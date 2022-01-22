@@ -1,6 +1,6 @@
 # Robot-Manipulator
 This is code for easy robot manipulator with 4 degrees of freedom and simple app that was made by remote xy
-#define AMOUNT 4  // кол-во серво
+#define AMOUNT 4  // servo amount
 #include "ServoSmooth.h"
 ServoSmooth servos[AMOUNT];
 
@@ -8,11 +8,11 @@ ServoSmooth servos[AMOUNT];
 
 #include <RemoteXY.h>
 
-// настройки соединения
+// conection settings
 #define REMOTEXY_SERIAL Serial
 #define REMOTEXY_SERIAL_SPEED 9600
 
-// конфигурация интерфейса
+// interface configuration
 #pragma pack(push, 1)
 uint8_t RemoteXY_CONF[] =
 { 255,4,0,16,0,44,0,15,31,1,
@@ -22,14 +22,14 @@ uint8_t RemoteXY_CONF[] =
 2,26,67,4,2,47,59,5,2,26,
 16 };
 
-// структура определяет все переменные и события вашего интерфейса управления
+// structure with variables of our interface
 struct {
 
 // input variables
-int8_t slider_1; // =0..100 положение слайдера
-int8_t slider_2; // =0..100 положение слайдера
-int8_t slider_3; // =0..100 положение слайдера
-int8_t slider_4; // =0..100 положение слайдера
+int8_t slider_1; // =0..100 slider 1 position
+int8_t slider_2; // =0..100 slider 2 position
+int8_t slider_3; // =0..100 slider 3 position
+int8_t slider_4; // =0..100 slider 4 position
 
 // output variables
 char text_1[16];
