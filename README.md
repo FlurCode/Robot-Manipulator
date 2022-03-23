@@ -1,4 +1,4 @@
-# Robot-Manipulator
+```# Robot-Manipulator
 This is code for easy robot manipulator with 4 degrees of freedom and simple app that was made by remote xy
 #define dx 55 //длина схвата
 #define dy 20 //выстота схвата
@@ -167,4 +167,4 @@ MyStruct invKinem(int x, int y, int z) {
   str.a2 = round(a02 + k);
   return str;
 
-}
+}```
