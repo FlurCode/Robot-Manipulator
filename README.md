@@ -42,10 +42,6 @@ int8_t slider_2; // =0..100 положение слайдера
 int8_t slider_3; // =0..100 положение слайдера
 int8_t slider_4; // =0..100 положение слайдера
 
-
-
-
-
 // output variables
 char text_1[16];
 
@@ -63,6 +59,7 @@ struct MyStruct {
 
 void setup()
 {
+
 Serial.begin(9600);
 
 RemoteXY_Init ();
@@ -84,10 +81,6 @@ servos[3].setSpeed(70);
 servos[3].setAccel(0.6);
 
 }
-
-
-
-
 
 void loop()
 {
@@ -114,6 +107,7 @@ String string = String(String(s1) + " " + String(s2) + " " + String(s3)+ " " + S
 string.toCharArray(RemoteXY.text_1,16);
 delay(1);
 }
+
 MyStruct invKinem(int x, int y, int z) {
   MyStruct str;
   float ac = 0;
@@ -137,7 +131,8 @@ MyStruct invKinem(int x, int y, int z) {
     }
   if (l>120 and l<190){
   g = degrees(asin(y / l)); 
-  g0ld = g;}
+  g0ld = g;
+  }
 
   if (x > 0) {
     g = 180 - g;
